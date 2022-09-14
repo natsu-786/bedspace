@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "104877622952",
+    "project_id": "bedspace-e4f30",
+    "storage_bucket": "bedspace-e4f30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104877622952:android:82fa760bdbd351d114249d",
+        "android_client_info": {
+          "package_name": "com.Aaahe.bedspace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104877622952-65n3akd9eingdeihat3kn35pb68nqaqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmN1Ve3xQlQCGMG9Gy5ck7v2zszZmHqrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104877622952-65n3akd9eingdeihat3kn35pb68nqaqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
