@@ -1,4 +1,5 @@
 import 'package:bedspace/auth_service.dart';
+import 'package:bedspace/pages/add_product.dart';
 import 'package:bedspace/pages/login_screen.dart';
 import 'package:bedspace/pages/main_screen.dart';
 import 'package:bedspace/providers/product.dart';
@@ -33,10 +34,11 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home:   main_screen(),
+        home:   add_product(),
         routes: {
           login_screen.routename : (ctx)=>  login_screen(),
           main_screen.routename : (ctx)=>  main_screen(),
+          add_product.routename : (ctx)=>  add_product(),
 
 
         },
