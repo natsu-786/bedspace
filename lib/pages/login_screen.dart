@@ -1,7 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:bedspace/auth_service.dart';
-import 'package:bedspace/pages/main_screen.dart';
+import 'package:bedspace/pages/add_product.dart';
 import 'package:flutter/material.dart';
 import 'package:bedspace/Animation/FadeAnimation.dart';
 import 'package:provider/provider.dart';
@@ -40,7 +40,7 @@ class _login_screenState extends State<login_screen> {
       await Provider.of<auth_service>(context, listen: false).login(
         _authData['email'].toString(),
         _authData['password'].toString(),
-      ).then((value) => Navigator.of(context).pushReplacementNamed(main_screen.routename));
+      ).then((value) => Navigator.of(context).pushReplacementNamed(add_product.routename));
     } else {
       // Sign user up
       await Provider.of<auth_service>(context, listen: false).signup(
@@ -242,6 +242,7 @@ class _login_screenState extends State<login_screen> {
                       // materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       // textColor: Theme.of(context).primaryColor,
                     ),
+                    TextButton(onPressed: ()=>Navigator.of(context).pushReplacementNamed(add_product.routename), child: Text('Add product')),
 
 
                     const SizedBox(height: 70,)

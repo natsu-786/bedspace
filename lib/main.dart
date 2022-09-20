@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home:   add_product(),
+        home:   login_screen(),
         routes: {
           login_screen.routename : (ctx)=>  login_screen(),
           main_screen.routename : (ctx)=>  main_screen(),

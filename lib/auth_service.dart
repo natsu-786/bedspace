@@ -13,4 +13,7 @@ class auth_service with ChangeNotifier {
   Future<Future<UserCredential>> login(String email, String password) async {
     return FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);
   }
+
 }
+
+

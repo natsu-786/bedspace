@@ -19,15 +19,16 @@ class products with ChangeNotifier {
   }
 
   product findById(String id) {
-    return _items.firstWhere((prod) => prod.id == id);
+    return _items.firstWhere((prod) => prod.uid == id);
   }
 
-  Future<void> addProduact(String id) async {
-    FirebaseFirestore.instance.collection('Product').doc(id).set( {
-      "id": 'id',
-      "title": 'spc.title',
-      "description": 'spc.description',
-      "price": 'spc.price',
+  Future<void> addProduact(String uid, product product) async {
+    FirebaseFirestore.instance.collection('Product').doc(uid).set( {
+      "id": uid,
+      "title": product.title,
+      "description": product.description,
+      "price": product.description,
+      "location":product.location
     });
     // need to see this
 
@@ -39,10 +40,10 @@ class products with ChangeNotifier {
     final List<product> loadedProducts = [];
     for (var prodData in data.docs) {
       loadedProducts.add(product(
-        id: 'id',
+        uid: 'id',
         title: prodData['title'],
         description: prodData['description'],
-        price: prodData['price'], imageUrl: '',
+        price: prodData['price'], location: prodData['location'],
       ));
     }
     _items = loadedProducts;

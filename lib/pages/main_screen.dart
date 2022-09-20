@@ -67,14 +67,6 @@ class _main_screenState extends State<main_screen> {
                         'https://images.pexels.com/photos/2820884/pexels-photo-2820884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
                         fit: BoxFit.cover,
                       ),
-                      TextButton(
-                          onPressed: () => Provider.of<products>(context,
-                                  listen: false)
-                              .addProduact(DateTime.now().toString())
-                              .then((value) =>
-                                  Provider.of<products>(context, listen: false)
-                                      .fetchandset()),
-                          child: Text('add'))
                     ],
                   ),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
